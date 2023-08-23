@@ -8,6 +8,7 @@ USER root
  RUN add-apt-repository ppa:ondrej/php \
     && apt-get update \
     && apt-get install -y php7.4 \
+    && apt-get install apt-transport-https ca-certificates gnupg curl sudo \
     && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
 #
 # More information: https://www.gitpod.io/docs/42_config_docker/
